@@ -17,6 +17,6 @@ public class MainActivity extends ReactActivity {
     return new DefaultReactActivityDelegate(
         this,
         getMainComponentName(),
-        DefaultNewArchitectureEntryPoint.getEnableFabric());
+        DefaultNewArchitectureEntryPoint.getFabricEnabled());
   }
 }
