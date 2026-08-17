@@ -1,6 +1,4 @@
 {
-  "name": "permaculture-conference-2026",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Official Android app for National Permaculture Conference 2026"
+  "name": "permaculture2026",
+  "displayName": "Permaculture 2026"
 }

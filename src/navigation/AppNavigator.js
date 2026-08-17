@@ -40,7 +40,7 @@ export default function AppNavigator({ onLogout }) {
           component={HomeScreen}
           options={{
             title: 'Home',
-            tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>🏠</TabBarIcon>,
+            tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>🏠</Text>,
           }}
         />
         <Tab.Screen
@@ -48,7 +48,7 @@ export default function AppNavigator({ onLogout }) {
           component={ProgramStack}
           options={{
             title: 'Program',
-            tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>📋</TabBarIcon>,
+            tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>📋</Text>,
           }}
         />
         <Tab.Screen
@@ -56,7 +56,7 @@ export default function AppNavigator({ onLogout }) {
           component={MapScreen}
           options={{
             title: 'Map',
-            tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>🗺️</TabBarIcon>,
+            tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>🗺️</Text>,
           }}
         />
         <Tab.Screen
@@ -64,7 +64,7 @@ export default function AppNavigator({ onLogout }) {
           component={HowToReachScreen}
           options={{
             title: 'Reach',
-            tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>🚗</TabBarIcon>,
+            tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>🚗</Text>,
           }}
         />
         <Tab.Screen
@@ -72,7 +72,7 @@ export default function AppNavigator({ onLogout }) {
           component={ContactScreen}
           options={{
             title: 'Contact',
-            tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>📞</TabBarIcon>,
+            tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>📞</Text>,
           }}
         />
       </Tab.Navigator>

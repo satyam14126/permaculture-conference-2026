@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import AppNavigator from './src/navigation/AppNavigator';
 import AuthScreen from './src/screens/AuthScreen';
+import { AuthContext } from './src/utils/AuthContext';
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -35,7 +36,8 @@ export default function App() {
   if (loading) {
     return (
       <View style={styles.loading}>
-        <Text style={styles.loadingText}>🌱 Permaculture Conference 2026</Text>
+        <Text style={styles.loadingLogo}>🌱</Text>
+        <Text style={styles.loadingText}>Permaculture Conference 2026</Text>
       </View>
     );
   }
@@ -44,10 +46,15 @@ export default function App() {
     return <AuthScreen onLogin={handleLogin} />;
   }
 
-  return <AppNavigator onLogout={handleLogout} />;
+  return (
+    <AuthContext.Provider value={{ logout: handleLogout }}>
+      <AppNavigator onLogout={handleLogout} />
+    </AuthContext.Provider>
+  );
 }
 
 const styles = StyleSheet.create({
   loading: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#2d5016' },
-  loadingText: { fontSize: 20, color: '#8fbc5a', fontFamily: 'serif', fontWeight: 'bold' },
+  loadingLogo: { fontSize: 48, marginBottom: 12 },
+  loadingText: { fontSize: 18, color: '#8fbc5a', fontWeight: 'bold' },
 });
