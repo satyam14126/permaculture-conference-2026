@@ -2,6 +2,9 @@ apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
 
 react {
+    /* Variants */
+    // Ensure JS bundle and assets are packaged into all APK variants (including debug) for standalone offline execution
+    debuggableVariants = []
 }
 
 def enableProguardInReleaseBuilds = false
